@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>San Diego Top Spots</title>
+    <style>
+        body {
+            font: 1rem/1.5 system-ui, sans-serif;
+            color: #222;
+            margin: 0;
+        }
+
+        main {
+            max-width: 72rem;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 0.6rem;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        tbody tr:nth-child(odd) {
+            background: #f5f5f5;
+        }
+
+        td a {
+            display: inline-block;
+            padding: 0.35rem 0.65rem;
+            border-radius: 0.25rem;
+            background: #25669b;
+            color: white;
+            text-decoration: none;
+        }
+
+        td a:hover, td a:focus-visible {
+            background: #184c76;
+            text-decoration: underline;
+        }
+
+        @media (min-width: 48rem) {
+            th:first-child {
+                width: 15%;
+            }
+
+            th:last-child {
+                width: 10.5rem;
+            }
+
+            td a {
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>San Diego Top Spots</h1>
+        <p id="spots-error" role="alert" hidden>Could not load the top spots. Please reload the page to try again.</p>
+        <table aria-label="San Diego Top Spots">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Link</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
